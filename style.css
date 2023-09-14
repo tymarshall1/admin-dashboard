@@ -5,7 +5,7 @@
 }
 
 :root {
-  background-color: azure;
+  background-color: gray;
 }
 
 body {
@@ -46,6 +46,7 @@ body {
   grid-template-rows: repeat(2, auto);
   grid-column: 2/4;
   background-color: white;
+  padding: 2rem;
 }
 
 .header .search {
@@ -54,13 +55,44 @@ body {
 }
 
 .projects {
-  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: 20px;
+  grid-column: 2/3;
   grid-row: 2/3;
-  background-color: red;
+  padding: 1rem;
+  gap: 15px;
+}
+
+.projects h3 {
+  grid-column: 1 / -1;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
 .newsFeedContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20px auto 20px auto;
   grid-column: 3/4;
   grid-row: 2/3;
-  background-color: aqua;
+  padding: 1rem 1rem 1rem 0;
+  gap: 15px;
+}
+
+.announcements,
+.trending {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.announcements {
+}
+
+.trending {
 }
