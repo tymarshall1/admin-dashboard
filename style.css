@@ -5,8 +5,9 @@
 }
 
 :root {
-  background-color: gray;
+  background-color: rgb(233, 233, 233);
   --icon-width: 1.5rem;
+  --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 body {
@@ -70,6 +71,7 @@ img + h2 {
   grid-column: 2/4;
   background-color: white;
   padding: 1rem;
+  box-shadow: var(--box-shadow);
 }
 
 .search {
@@ -84,7 +86,7 @@ img + h2 {
 .search > input {
   height: 25px;
   border-radius: 5px;
-  flex: 1;
+  width: 50%;
 }
 
 .user-profile-nav {
@@ -96,6 +98,37 @@ img + h2 {
 
 .user-profile-nav img {
   width: var(--icon-width);
+}
+
+.welcome {
+  display: flex;
+  align-items: flex-end;
+}
+
+.welcome img {
+  width: 3rem;
+}
+
+.welcome-text {
+  display: inline-block;
+}
+
+.user-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.user-actions button {
+  padding: 0.5rem;
+  flex: 1;
+  border-radius: 25px;
+  border: none;
+  background-color: blue;
+  color: white;
+  font-weight: 800;
 }
 
 .projects {
@@ -116,6 +149,7 @@ img + h2 {
   background-color: white;
   padding: 1rem;
   border-radius: 5px;
+  box-shadow: var(--box-shadow);
 }
 
 .newsFeedContainer {
@@ -133,6 +167,7 @@ img + h2 {
   padding: 1rem;
   background-color: white;
   border-radius: 5px;
+  box-shadow: var(--box-shadow);
 }
 
 .announcements {
